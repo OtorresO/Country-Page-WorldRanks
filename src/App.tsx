@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react'
-import './app.css'
 import ReactPaginate from 'react-paginate';
 import { Country } from './interfaces/Country'
 import { mappingData } from './helpers/Helper';
@@ -78,7 +77,7 @@ function App() {
         newCountries = newCountries.sort((b, a) => a.area - b.area)
         break;
     }
-    console.log('data FIltrada', newCountries)
+    
     const newOffset = 0;
     const endOffset = newOffset + ITEMS_PER_PAGE
     setPageCount(Math.ceil(newCountries.length / ITEMS_PER_PAGE))
